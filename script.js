@@ -82,7 +82,7 @@ if (googleBtn) {
     const provider = new GoogleAuthProvider();
     try {
       await signInWithPopup(auth, provider);
-      window.location.href = "login.js";
+      window.location.href = "login.html";
     } catch (error) {
       document.getElementById("msg").innerText = error.message;
     }
@@ -110,7 +110,7 @@ const logoutBtn = document.getElementById("logoutBtn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", async () => {
     await signOut(auth);
-    window.location.href = "login.js";
+    window.location.href = "login.html";
   });
 }
 
@@ -123,7 +123,7 @@ onAuthStateChanged(auth, (user) => {
     }
   } else {
     if (window.location.pathname.includes("index.html")) {
-      window.location.href = "login.js";
+      window.location.href = "login.html";
     }
   }
 });
