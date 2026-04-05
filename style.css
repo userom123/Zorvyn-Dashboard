@@ -1,0 +1,533 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: linear-gradient(#dcdcdc, white);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dash-img {
+width: 80px;
+height: 80px;
+margin-left: 1vw;
+padding: 10px;
+}
+
+#icon1 {
+    font-size: 5rem;
+}
+
+i{
+    font-size: 2rem;
+    cursor: pointer;
+    color: #222;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+}
+
+canvas {
+    height: 400px !important;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    color: #444;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+}
+
+.dark {
+    background: #111827;
+    color: #333;
+}
+
+.dark header {
+    background: #222631;
+    color: white;
+}
+
+.dark header h1 {
+color: white;
+}
+
+.dark #darkToggle i {
+    color: white;
+}
+.dark i {
+    color: white;
+    cursor: pointer;
+}
+.dark .card,
+.dark canvas,
+.dark table,
+.dark #adminPanel,
+.dark .insights {
+    background: #1f2937;
+    color: white;
+}
+
+.dark .charts {
+    background-color: #111836;
+}
+
+.dark th {
+    background: #111827;
+}
+
+.dark tr:nth-child(even) {
+    background: #374151;
+}
+
+#darkToggle {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.charts canvas {
+    background:  white;
+    padding: 15px;
+    border-radius: 12px;
+    height: 300px;
+}
+
+header {
+    color: white;
+    background-color: rgb(196, 197, 197);
+    padding: 5px;
+    box-shadow: 1px 1px 5px 5px #555;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+.cards {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    box-shadow: 1px 1px 5px 5px rgb(77, 83, 83);
+    transform: translate(5px);
+    transition: 1s;
+}
+
+.card h3 {
+    text-align: center;
+}
+
+.card p {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.charts {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+canvas {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+table {
+    max-width: 100%;
+    margin: 20px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#adminPanel {   
+    padding: 10px;
+}
+
+#roleSelect{
+    padding: 5px 14px;
+    background-color: white;
+    outline: none;
+    color: #222;
+    cursor: pointer;
+}
+
+#search {
+width: 85%;
+padding: 10px 20px;
+}
+
+.search {
+    display: flex;
+    outline: none;
+    justify-content: center;
+    padding: 15px;
+}
+
+
+.insights {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#transaction{
+    width: 11.8%;
+    padding: 10px;
+}
+
+#adminPanel {
+    max-width: 100%;
+}
+
+#adminPanel input {
+    width: 15%;
+    padding: 10px 20px;
+}
+
+#category {
+      width: 15%;
+    padding: 10px 20px;
+}
+
+#type {
+    width: 15%;
+    padding: 10px 20px;
+}
+
+#adminPanel h2 {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    box-shadow: 1px 1px 6px 6px #555;
+    padding: 15px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#glass {
+    color: white;
+    font-size: 29px;
+    color: #111;
+    background-color: white;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* start media uiry */
+
+
+/* .card & .charts */
+
+@media (max-width: 667px) {
+    .cards, .charts {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 740px) {
+    .cards, .charts {
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .cards, .charts {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 667px) {
+    .cards, .charts {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 740px) {
+    .cards, .charts {
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:1200px) {
+    .cards, .charts {
+        display: flex;
+        max-width: 100%;
+    }
+}
+
+/* end card .chart */
+
+
+/* start .card */
+
+@media (max-width: 600px) {
+
+.cards {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+}
+
+@media (max-width: 667px) {
+.cards {
+    display: flex;
+    justify-content: center;
+}
+}
+
+@media (max-width: 740px) {
+.cards {
+    display: flex;
+    justify-content: center;
+}
+}
+
+/* end-- start .card */
+
+
+/* start adminPaben */
+@media (max-width: 600px) {
+#adminPanel input{
+width: 85vw;
+margin-top: 1vh;
+}
+}
+
+/* end-- adminPaben */
+
+@media (max-width: 600px) {
+#category {
+    width: 96vw;
+    margin-top: 1vh;
+}
+}
+
+@media (max-width: 600px) {
+#type {
+    margin-top: 1vh;
+    width: 96vw;
+}
+}
+
+@media (max-width: 600px) {
+#transaction {
+    margin-top: 1vh;
+    width: 96vw;
+}
+}
+
+/*  start min-height quiry */
+
+@media (min-width: 600px) {
+#adminPanel input{
+ width: 95vw;
+margin-top: 1vh;
+
+}
+}
+
+@media (min-width: 600px) {
+#category {
+    width: 100%;
+    margin-top: 1vh;
+}
+}
+
+@media (min-width: 600px) {
+#type {
+    margin-top: 1vh;
+    width: 100%;
+}
+}
+
+@media (min-width: 600px) {
+#transaction {
+    margin-top: 1vh;
+    width: 100%;
+
+}
+}
+
+/* End min-height quiry */
+
+
+@media (max-width: 400px) {
+header {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    color: white;
+    box-shadow: 1px 1px 5px 5px #555;
+}
+}
+
+@media (max-width: 667px) {
+header {
+    display: flex;
+    align-items: center;
+    max-width: 97%;
+    color: white;
+    box-shadow: 1px 1px 5px 5px #555;
+}
+}
+
+@media (max-width: 740px) {
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+    box-shadow: 1px 1px 5px 5px #555;
+}
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 667px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 740px) {
+    header h1 {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    canvas #lineChart {
+    height: 100px !important;
+    }
+}
+
+@media (max-width: 776px) {
+    canvas {
+    height: 100px !important;
+    }
+}
+
+@media (max-width: 740px) {
+    canvas {
+    
+    height: 340px !important;
+
+    }
+}
+
+@media (max-width: 740px) {a
+    #lineChart {
+    max-width: 100%;
+    height: 70vw !important;
+
+    }
+}
+
+
+
+@media (max-width: 660px) {
+
+table {
+    max-width: 100%;
+    margin: 10px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding:7px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+}
+
+
+@media (max-width: 412px) {
+
+table {
+    max-width: 100%;
+    margin: 10px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding:7px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+}
+
+
+@media (max-width: 712px) {
+
+table {
+    max-width: 100%;
+    margin: 10px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding:4px;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+}
+}
+
+

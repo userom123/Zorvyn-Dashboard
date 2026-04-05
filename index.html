@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanical Dashbord</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rowdies:wght@300;400;700&display=swap');
+</style>
+
+    <header>
+    <img class="dash-img" src="dash-imgs/decision-making.png" alt="img1">
+    <h1> Zorvyn Financial Dashboard</h1>
+    <div class="btns">
+        <select id="roleSelect">
+            <option value="admin">Admin</option>
+            <option value="viewer">Viewer</option>
+        </select>
+        <button id="darkToggle"><i class="fa-solid fa-eye"></i></button>
+    </div>
+</header>
+
+    <!-- Summary Cards -->
+    <div class="cards">
+        <div class="card">
+           <i class="fa-solid fa-indian-rupee-sign"></i> <h3>Total Balance</h3>
+            
+            <p id="balance"> 0</p>
+        </div>
+        <div class="card">
+            <i class="bi bi-cash-coin"></i>
+            <h3>Total Income</h3>
+            <p id="income">0</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-file-invoice"></i>
+            <h3>Total Expense</h3>
+            <p id="expense">0</p>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts">
+        <canvas id="lineChart"></canvas>
+        <canvas id="pieChart"></canvas>
+    </div>
+
+    <!-- Add Transaction -->
+     <div class="admin-conntainer">
+    <div id="adminPanel">
+        <h2>Add Transaction</h2>
+        <input type="text" id="text" placeholder="Description"><br>
+        <input type="number" id="amount" placeholder="Amount"><br>
+        <input type="date" id="date" placeholder="Date & Time">
+        <select id="category"><br>
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Shopping</option>
+            <option>Salary</option>
+        </select><br>
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <button id="transaction" onclick="addTransaction()">Add</button>
+    </div>
+     </div>
+
+    <!-- Search -->
+     <h3>Search Transaction</h3>
+     <div class="search">
+    <input type="text" id="search" placeholder="Search Transaction">
+     </div> 
+    <!-- Transactions Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="transactionTable"></tbody>
+    </table>
+
+    <!-- Insights -->
+    <div class="insights">
+        <h2>Insights</h2>
+        <p id="topCategory"></p>
+        <p id="monthlyCompare"></p>
+    </div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
