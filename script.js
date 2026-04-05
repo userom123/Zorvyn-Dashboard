@@ -122,7 +122,6 @@ onAuthStateChanged(auth, (user) => {
       document.getElementById("userEmail").innerText = "Logged in as: " + user.email;
     }
   } else {
-    if (window.location.pathname.includes("/Zorvyn-Dashboard/login.html")) {
       window.location.href = "/Zorvyn-Dashboard/login.html";
     }
   }
