@@ -122,7 +122,7 @@ onAuthStateChanged(auth, (user) => {
       document.getElementById("userEmail").innerText = "Logged in as: " + user.email;
     }
   } else {
-    if (window.location.pathname.includes("index.html")) {
+    if (window.location.pathname.includes("login.html")) {
       window.location.href = "login.html";
     }
   }
