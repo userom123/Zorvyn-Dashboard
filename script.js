@@ -67,7 +67,7 @@
 
       try {
         await signInWithEmailAndPassword(auth, email, password);
-        window.location.href = "/Zorvyn-Dashborad/login.html";
+        window.location.href = "/Zorvyn-Dashboard/login.html";
       } catch (error) {
         document.getElementById("msg").innerText = error.message;
       }
@@ -82,7 +82,7 @@
       const provider = new GoogleAuthProvider();
       try {
         await signInWithPopup(auth, provider);
-        window.location.href = "/Zorvyn-Dashborad/login.html";
+        window.location.href = "/Zorvyn-Dashboard/login.html";
       } catch (error) {
         document.getElementById("msg").innerText = error.message;
       }
@@ -110,7 +110,7 @@
   if (logoutBtn) {
     logoutBtn.addEventListener("click", async () => {
       await signOut(auth);
-      window.location.href = "/Zorvyn-Dashborad/login.html";
+      window.location.href = "/Zorvyn-Dashboard/login.html";
     });
   }
 
@@ -122,8 +122,8 @@
         document.getElementById("userEmail").innerText = "Logged in as: " + user.email;
       }
     } else {
-      if (window.location.pathname.includes("/Zorvyn-Dashborad/login.html")) {
-        window.location.href = "/Zorvyn-Dashborad/login.html";
+      if (window.location.pathname.includes("/Zorvyn-Dashboard/login.html")) {
+        window.location.href = "/Zorvyn-Dashboard/login.html";
       }
     }
   });
