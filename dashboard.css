@@ -57,6 +57,11 @@ color: white;
 .dark #darkToggle i {
     color: white;
 }
+
+.dark .card h3 {
+color: white;
+}
+
 .dark i {
     color: white;
     cursor: pointer;
@@ -139,6 +144,7 @@ header {
 
 .card h3 {
     text-align: center;
+    color: #111;
 }
 
 .card p {
