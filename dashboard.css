@@ -464,8 +464,7 @@ header {
 
 @media (max-width: 740px) {
     canvas {
-    
-    height: 340px !important;
+    height: 310px !important;
 
     }
 }
